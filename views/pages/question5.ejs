@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<head>
-    <title>Node: Workshop 1</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+<%- include("../partials/head") %>
+
+
 <body>
-    <header>
-        <h1>Node: Workshop 1</h1>
-    </header>
+    <%- include("../partials/header") %>
     <div class='main'>
         <h2>Part 1</h2>
         <div class='content'>
             <%- include('../partials/questions/5') %>
             <div class='box answer'>
                 <h3>Answer</h3>
-                <!-- render answer here -->
+                <ol>
+                    <% popularGirlNames.forEach((name,id)=>{%>
+                    <li> <%= id+1 %>. <%=name%></li>
+                    <%}); %>
+                </ol>
+
+                <a href='/question6'>Previous</a>
+                <a href='/question4'>Next</a>
 
             </div>
         </div>
